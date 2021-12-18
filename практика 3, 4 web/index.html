@@ -1,0 +1,96 @@
+<meta charset="utf-8">
+<script>
+    var arr = [];
+    var k = 0;
+    var s = 0;
+    for ( var i = 0; i < 15; i++ ) {
+        arr.push(Math.round(Math.random()*40-10))
+        if (arr[i] > 0){
+            s = s + arr[i];
+            k++ ;
+        }
+    }
+    alert(arr);
+    alert("Среднее арифметическое " + s/k);
+
+    var arr2 = [];
+    var n = (Math.round(Math.random() * 10 + 10)) ;
+    for ( var i = 0; i < n; i++ ) {
+        arr2.push(Math.round(Math.random()*40-10))
+        if ( arr2[i]<0) {
+            arr2[i] = arr2[i]*arr2[i] 
+        } 
+    }
+    alert(arr2);
+
+    var arr3 = [];
+    var p = 0;
+    var p1 = 0;
+    var m = 0;
+    var m1 = 0;
+    var l = 0;
+    for ( var i = 0; i < 20; i++ ) {
+        arr3.push(Math.round(Math.random()*40-10))
+        if (arr3[i] > 0){
+            p = p + arr3[i];
+            p1++ ;
+        } else if (arr3[i] < 0) {
+            m = m + arr3[i];
+            m1++ ;
+        } else { 
+            l++
+        }
+    }
+    alert (arr3);
+    alert("Среднее арифметическое положительных " + p/p1);
+    alert("Среднее арифметическое отрицательных" + m/m1);
+    alert("количество нулей " + l);
+
+    var arr4 = [];
+    var j = 0;
+    var h = 0;
+    var a = 0;
+    var b = 0;
+    var c = 0;
+    var d = 0;
+    for ( var i = 0; i < 1000000; i++ ) {
+        arr4.push(Math.round(Math.random()*2)) 
+        if ((arr4[i] == arr4[i-1]) && (arr4[i] == 0)) {
+            j++
+        } else {
+            if (j+1 > h) {
+                h = j+1;
+            }
+            j = 0;
+        }
+
+        if ((arr4[i] == arr4[i-1]) && (arr4[i] == 1)) {
+            a++
+        } else {
+            if (a+1 > b) {
+                b = a+1;
+            }
+            a = 0;
+        }
+
+        if ((arr4[i] == arr4[i-1]) && (arr4[i] == 2)) {
+            c++
+        } else {
+            if (c+1 > d) {
+                d = c+1;
+            }
+            c = 0;
+        }
+    }
+    max_ = Math.max(h, b, d) 
+    if (h == max_) {
+        alert("Максимальная последовательность у красных");
+    }
+    if (b == max_) {
+        alert("Максимальная последовательность у черных");
+    }
+    if (d == max_) {
+        alert("Максимальная последовательность у белых");
+    }
+</script>
+

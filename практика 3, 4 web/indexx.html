@@ -1,0 +1,109 @@
+<meta charset="utf-8">
+<script> 
+let user = {
+    name: "Джон",
+    age: 30
+  };
+  user.sayHi = function() {
+  alert("Привет!");
+};
+user.sayHi(); // Привет!
+
+var customer = {
+    name: "xcvbnmm",
+    surname: "MNB",
+    age: 89,
+    favcolor:"grey",
+    favfood:"salad"
+}
+customer.inf = function() {
+    alert (this.name);
+    alert (this.surname);
+    alert (this.age);
+}
+customer.inf();
+
+var guest = {
+    name: "Kate",
+    surname: "Green"
+}
+
+var order = {
+    positions: "sushi",
+    hpositions: "nudles"
+}
+
+var restaurant = {
+    name: "mirror",
+    adress: "kjhgvfcd",
+    kitchen: "chineze"
+}
+
+guest.oo =  function(order){
+    if (this.name == "Kate") {
+        alert (order.hpositions);
+    }
+}
+guest.oo(order);
+
+function User(name) {
+  this.name = name;
+  this.isAdmin = false;
+}
+
+let user5 = new User("Илана");
+var user2 = new User("Ира");
+var user3 = new User("Миша");
+var user4 = new User("Настя");
+
+alert(user5.name); // Илана
+alert(user4.name); // Настя
+alert(user5.isAdmin); // false
+
+
+function User(name) {
+  this.name = name;
+
+  this.sayHi = function() {
+    alert( "Меня зовут: " + this.name );
+  };
+}
+
+let el = new User("El");
+
+el.sayHi(); // Меня зовут: Вася
+
+/*
+vasya = {
+   name: "Вася",
+   sayHi: function() { ... }
+}
+*/
+
+function Calc(a,b) {
+    this.a = a;
+    this.b = b;
+    
+    this.summ = function() {
+        alert("Сумма " + (this.a + this.b))
+    }
+    this.r = function() {
+        alert("Разность " + (this.a - this.b))
+    }
+    this.pr = function() {
+        alert("Произведение " + (this.a * this.b))
+    }
+    this.ch = function() {
+        alert("Частное " + (this.a / this.b))
+    }
+
+}
+ var fdh = new Calc(4,6);
+
+ fdh.summ();
+ fdh.r();
+ fdh.pr();
+ fdh.ch();
+
+</script>
+  
